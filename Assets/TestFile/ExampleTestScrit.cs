@@ -12,7 +12,7 @@ namespace Tests
     {
         //BreforeAfterTestAttributeを持たせる
         [Test, BeforeAfterTest]
-        public void ExampleTestScritSimplePasses()
+        public void TestCode()
         {
             Debug.Log("実行");
         }
@@ -20,7 +20,7 @@ namespace Tests
         // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
         // `yield return null;` to skip a frame.
         [UnityTest]
-        public IEnumerator ExampleTestScritWithEnumeratorPasses()
+        public IEnumerator Testenum()
         {
             Debug.Log("1");
             yield return null;

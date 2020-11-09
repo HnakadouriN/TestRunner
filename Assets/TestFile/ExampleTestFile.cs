@@ -12,7 +12,7 @@ namespace ExampleEditorTests
     public class ExampleTestFile : IPrebuildSetup, IPostBuildCleanup
     {
         [Test]
-        public void ExampleTest01()
+        public void RelatedToTestPrefab()
         {
             var prefab = Resources.Load<GameObject>("TestPrefab");
             Assert.That(prefab.name == "TestPrefab");
@@ -24,6 +24,7 @@ namespace ExampleEditorTests
         public void Setup()
         {
 #if UNITY_EDITOR
+            AssetDatabase.CreateFolder("Assets","Resources");
             var go = GameObject.CreatePrimitive(PrimitiveType.Cube);
             var path = "Assets/Resources/TestPrefab.prefab";
             PrefabUtility.SaveAsPrefabAsset(go, path);

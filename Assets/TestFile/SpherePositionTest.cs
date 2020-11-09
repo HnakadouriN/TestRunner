@@ -7,35 +7,16 @@ using UnityEditor;
 
 namespace Tests
 {
-    public class SpherePositionTest:IPrebuildSetup ,IPostBuildCleanup
+    public class SpherePositionTest
     {
 
         // A Test behaves as an ordinary method
         [Test]
-        public void SpherePositionTestSimplePasses()
+        public void CreateCapsule()
         {
-            
-        }
-
-        // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-        // `yield return null;` to skip a frame.
-        [UnityTest]
-        public IEnumerator SpherePositionTestWithEnumeratorPasses()
-        {
-            // Use the Assert class to test conditions.
-            // Use yield to skip a frame.
-            yield return null;
-        }
-
-        public void Setup()
-        {
-            string path = "Assets/Prefabs/Cube.prefab";
-            var obj = AssetDatabase.LoadAssetAtPath<GameObject>(path);
-        }
-
-        public void Cleanup()
-        {
-            throw new System.NotImplementedException();
+            var prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/Sphere.prefab");
+            Assert.That(prefab.transform.localEulerAngles == Vector3.zero);
+            Debug.Log("localEulerAngle = " + prefab.transform.localEulerAngles);
         }
     }
 }
