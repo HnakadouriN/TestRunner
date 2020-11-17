@@ -35,7 +35,7 @@ namespace ExampleEditorTests
         public void Cleanup()
         {
 #if UNITY_EDITOR
-            AssetDatabase.DeleteAsset("Assets/Resources/TestPrefab.prefab");
+            AssetDatabase.DeleteAsset("Assets/Resources");
 #endif
         }
     }
