@@ -13,8 +13,8 @@ namespace Tests
         [UnityTest]
         public IEnumerator IdouTestWithEnumeratorPasses()
         {
-            var gameobj = new GameObject("obj");
-            var idou = gameobj.AddComponent<Idou>();
+            var go = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            var idou = go.AddComponent<Idou>();
             // Start()前
             Assert.AreEqual(0, idou.count);
 
@@ -23,7 +23,7 @@ namespace Tests
             // Start()後
             Assert.AreEqual(1, idou.count);
             yield return new WaitForSeconds(3);
-            Assert.That(gameobj.transform.position == new Vector3(1, 0, 100));
+            Assert.That(go.transform.position == new Vector3(1, 0, 5));
             Debug.Log("いいね");
         }
     }

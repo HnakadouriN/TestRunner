@@ -14,10 +14,10 @@ public class Idou : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.gameObject.transform.position = this.transform.position + new Vector3(0, 0, 1);
-        if(this.transform.position.z >= 100)
+        this.gameObject.transform.position = this.transform.position + new Vector3(0, 0, 0.1f);
+        if(this.transform.position.z >= 5)
         {
-            this.gameObject.transform.position = new Vector3(1,0,100);
+            this.gameObject.transform.position = new Vector3(1,0,5);
         }
     }
 }
