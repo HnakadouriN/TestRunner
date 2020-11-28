@@ -1,6 +1,8 @@
 {
     "name": "TestFile",
-    "references": [],
+    "references": [
+        "NewAssembly"
+    ],
     "optionalUnityReferences": [
         "TestAssemblies"
     ],

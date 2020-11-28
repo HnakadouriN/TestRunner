@@ -22,7 +22,7 @@ namespace Tests
 
             // Start()後
             Assert.AreEqual(1, idou.count);
-            yield return new WaitForSeconds(3);
+            idou.ObjMove();
             Assert.That(go.transform.position == new Vector3(1, 0, 5));
             Debug.Log("いいね");
         }

@@ -15,4 +15,9 @@ public class SampleScript : MonoBehaviour
     {
         
     }
+
+    public void Hoge()
+    {
+        Debug.Log("hoge");
+    }
 }
